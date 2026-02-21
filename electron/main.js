@@ -195,6 +195,44 @@ function createWindow() {
     } catch (e) { return []; }
   });
 
+  // ====== YAPAY ZEKA (GEMINI) FPS MOTORU BURADA ======
+  ipcMain.handle('get-ai-fps', async (event, gpu, gameTitle) => {
+    try {
+        // FURKY BURAYA DİKKAT: Ücretsiz aldığın Gemini API keyini aşağıya tırnak içine yapıştır kanka.
+        const API_KEY = "BURAYA_API_KEY_GELECEK"; 
+
+        if (API_KEY === "BURAYA_API_KEY_GELECEK") {
+            // Key yoksa bilerek hata fırlatıyoruz ki App.jsx'teki fallback (yedek matematik) çalışsın
+            throw new Error("Gemini API Key girilmemiş, yedek sisteme geçiliyor.");
+        }
+
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                contents: [{
+                    parts: [{ text: `Sen bir donanım uzmanısın. Sadece tek bir sayı dön. Başka hiçbir kelime, sembol veya açıklama kullanma. Sistemimde ${gpu} ekran kartı var. ${gameTitle} oyununda ortalama kaç FPS alırım?` }]
+                }]
+            })
+        });
+
+        const data = await response.json();
+        
+        // Yapay zekadan gelen "140 FPS" gibi bir cevabı temizleyip sadece "140" alıyoruz
+        const fpsText = data.candidates[0].content.parts[0].text.trim();
+        const fpsNumber = parseInt(fpsText.replace(/[^0-9]/g, ''));
+
+        if(isNaN(fpsNumber)) throw new Error("Yapay zeka sapıttı, sayı dönmedi.");
+
+        return `${fpsNumber} FPS`;
+
+    } catch (error) {
+        console.log("[SR Ultimate AI Hatası]:", error.message);
+        throw error; // Hatayı App.jsx'e pasla ki arayüz yedek formüle dönsün
+    }
+  });
+  // ====================================================
+
   ipcMain.on('minimize-app', () => mainWindow.minimize());
   ipcMain.on('maximize-app', () => mainWindow.isMaximized() ? mainWindow.unmaximize() : mainWindow.maximize());
   ipcMain.on('close-app', () => app.quit());

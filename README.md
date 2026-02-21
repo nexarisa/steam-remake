@@ -1,16 +1,34 @@
-# React + Vite
+📖 Proje Hakkında
+Steam Remake, React ve Electron.js kullanılarak geliştirilmiş, yüksek performanslı ve modern bir masaüstü oyun istemcisi alternatifidir. Oyunculara gelişmiş profil özelleştirmeleri, gerçek zamanlı donanım taraması ve kusursuz yerel oyun tespiti sunarak yeni nesil bir arayüz deneyimi yaşatmayı hedefler.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Temel Özellikler
+🎮 Yerel Oyun Senkronizasyonu: Bilgisayardaki yerel diskleri (C:, D: vb.) ve .acf dosyalarını otomatik tarayarak yüklü Steam oyunlarını ve gerçek boyutlarını tespit eder.
 
-Currently, two official plugins are available:
+🤖 Dinamik FPS Analizi: systeminformation kütüphanesi ile sistem donanımınızı (GPU/CPU) okur ve seçilen oyun için tahmini/dinamik bir FPS değeri sunar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 Canlı Mağaza Entegrasyonu: Steam Web API üzerinden gerçek zamanlı oyun detaylarını, fiyatları, ekran görüntülerini ve HD fragmanları arayüze yansıtır.
 
-## React Compiler
+🎨 Gelişmiş Profil Özelleştirme: Discord tarzı anlık durum (Çevrimiçi/Oyunda) sistemi, şeffaflık ayarlı video/fotoğraf arkaplanlar, avatar çerçeveleri ve yerel yorum sistemi içerir.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⚡ Yüksek Performans: Vite ve Electron altyapısı sayesinde anında açılır, Tailwind CSS ile tasarlanmış akıcı animasyonlara sahiptir.
 
-## Expanding the ESLint configuration
+🛠️ Kurulum
+Bu uygulamayı kendi bilgisayarınızda çalıştırmak için Git ve Node.js yüklü olmalıdır.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Bash
+
+# Projeyi klonlayın
+$ git clone [https://github.com/SENIN_KULLANICI_ADIN/steam-remake.git](https://github.com/SENIN_KULLANICI_ADIN/steam-remake.git)
+
+# Proje klasörüne girin
+$ cd steam-remake
+
+# Gerekli paketleri yükleyin
+$ npm install
+
+# Geliştirici modunda çalıştırın
+$ npm run electron:dev
+
+# Üretime hazır Kurulum (Setup.exe) dosyasını oluşturun
+$ npm run build
+Developer: Furkan (Nexarisa / Furky)

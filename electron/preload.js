@@ -8,6 +8,9 @@ contextBridge.exposeInMainWorld('electron', {
   getSystemSpecs: () => ipcRenderer.invoke('get-system-specs'),
   getInstalledGames: () => ipcRenderer.invoke('get-installed-games'),
   searchSteam: (query) => ipcRenderer.invoke('search-steam', query),
-  getGameDetails: (appId) => ipcRenderer.invoke('get-game-details', appId), // YENİ
-  launchGame: (appId) => ipcRenderer.send('launch-game', appId)
+  getGameDetails: (appId) => ipcRenderer.invoke('get-game-details', appId),
+  launchGame: (appId) => ipcRenderer.send('launch-game', appId),
+  
+  // İŞTE YAPAY ZEKA KÖPRÜSÜ
+  getAiFps: (gpu, gameTitle) => ipcRenderer.invoke('get-ai-fps', gpu, gameTitle)
 });
