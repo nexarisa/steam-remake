@@ -1,34 +1,46 @@
-📖 Proje Hakkında
-Steam Remake, React ve Electron.js kullanılarak geliştirilmiş, yüksek performanslı ve modern bir masaüstü oyun istemcisi alternatifidir. Oyunculara gelişmiş profil özelleştirmeleri, gerçek zamanlı donanım taraması ve kusursuz yerel oyun tespiti sunarak yeni nesil bir arayüz deneyimi yaşatmayı hedefler.
+# 🌌 Steam Remake: Ultimate Edition (v3.1.0)
 
-✨ Temel Özellikler
-🎮 Yerel Oyun Senkronizasyonu: Bilgisayardaki yerel diskleri (C:, D: vb.) ve .acf dosyalarını otomatik tarayarak yüklü Steam oyunlarını ve gerçek boyutlarını tespit eder.
+React, Electron ve Tailwind CSS kullanılarak sıfırdan geliştirilen; yapay zeka destekli, ultra modern ve yüksek performanslı yeni nesil masaüstü oyun istemcisi. Hantal ve eski arayüzlere veda edin; karşınızda akıcı, şeffaf ve akıllı bir platform.
 
-🤖 Dinamik FPS Analizi: systeminformation kütüphanesi ile sistem donanımınızı (GPU/CPU) okur ve seçilen oyun için tahmini/dinamik bir FPS değeri sunar.
+---
 
-🌐 Canlı Mağaza Entegrasyonu: Steam Web API üzerinden gerçek zamanlı oyun detaylarını, fiyatları, ekran görüntülerini ve HD fragmanları arayüze yansıtır.
+## 🚀 Devrim Niteligindeki Özellikler
 
-🎨 Gelişmiş Profil Özelleştirme: Discord tarzı anlık durum (Çevrimiçi/Oyunda) sistemi, şeffaflık ayarlı video/fotoğraf arkaplanlar, avatar çerçeveleri ve yerel yorum sistemi içerir.
+### 🔮 Modern "Glassmorphism" Arayüz
+* **Yüksek Çözünürlük:** Oyun detay sayfaları, Steam'in orijinal *High-Res Hero* görselleriyle bulanıklık (blur) efektleri harmanlanarak tasarlandı.
+* **Akıcı Deneyim:** Menüler arası geçişlerde sıfır takılma, tamamen animasyonlu ve tepkisel (responsive) komponent yapısı.
 
-⚡ Yüksek Performans: Vite ve Electron altyapısı sayesinde anında açılır, Tailwind CSS ile tasarlanmış akıcı animasyonlara sahiptir.
+### 🤖 Yapay Zeka Destekli FPS Motoru (AI Engine)
+* **Dinamik Donanım Taraması:** Sisteminizdeki İşletim Sistemi, Ekran Kartı, İşlemci ve RAM miktarını anlık olarak okur.
+* **Google Gemini V8 Entegrasyonu:** Seçtiğiniz oyunun ağırlığına ve donanımınıza göre saniyeler içinde **gerçekçi FPS analizi** yapar.
+* **Gelişmiş Yedek Motor (Fallback):** İnternet kopsa veya API yanıt vermese dahi, 5090'dan 1060'a kadar GPU'ları tanıyan ve oyun motorlarına (Cyberpunk = Ağır, CS2 = E-Spor) göre çarpan uygulayan çevrimdışı matematik motoru devreye girer. Uygulama asla çökmez.
 
-🛠️ Kurulum
-Bu uygulamayı kendi bilgisayarınızda çalıştırmak için Git ve Node.js yüklü olmalıdır.
+### 🎮 Akıllı Kütüphane Yönetimi
+* **Otomatik Senkronizasyon:** Bilgisayarınızdaki `steamapps` klasörlerini ve bulut `userdata` kayıtlarını otomatik tarar.
+* **Akıllı Filtreleme:** Steamworks, Proton, Dedicated Server gibi gereksiz arka plan dosyalarını gizleyerek sadece saf oyun deneyimi sunar.
+* **Canlı Veriler:** Oynama süresi, son oynanma tarihi ve diskte kaplanan alan gibi bilgileri anlık çeker.
+* **Doğrudan Başlatma:** Kütüphaneden oyunları `steam://run/` protokolü ile tek tıkla başlatır veya yükler.
 
-Bash
+### 🛒 Filtrelenmiş Premium Mağaza
+* **AAA Oyun Vitrini:** Göz atın sekmesi yalnızca en kaliteli oyunları listeler.
+* **İzole DLC Sistemi:** Eklentiler ve DLC paketleri ana mağazadan tamamen kazındı ve onlara özel **"DLC & Eklentiler"** sekmesi oluşturuldu.
+* **Dinamik Kur Çevirisi:** Fiyatlar anlık olarak analiz edilip Amerikan Doları (USD) formatına dönüştürülür.
+* **Gelişmiş Medya Oynatıcı:** Oyun fragmanlarını ve ekran görüntülerini özel sinematik modda izleme imkanı.
 
-# Projeyi klonlayın
-$ git clone [https://github.com/SENIN_KULLANICI_ADIN/steam-remake.git](https://github.com/SENIN_KULLANICI_ADIN/steam-remake.git)
+### 💬 Birebir Arkadaşlık ve Sohbet Sistemi
+* **SR-ID Sistemi:** Her kullanıcıya özel atanan (Örn: `SR-FUR-8492`) ID'ler ile arkadaş ekleme ve silme.
+* **Durum Göstergeleri:** Çevrimiçi, Oyunda, Meşgul ve Çevrimdışı durumlarını renkli rozetlerle takip etme.
+* **Canlı Sohbet Simülasyonu:** Anlık mesajlaşma arayüzü ve akıllı bot yanıt sistemi.
 
-# Proje klasörüne girin
-$ cd steam-remake
+### ⚙️ C2 Seviye Çoklu Dil & Bildirim Sistemi
+* **Global Dil Desteği:** Türkçe, İngilizce, Almanca, Fransızca, Rusça ve Japonca.
+* **PNG Bayraklar:** Emojiler yerine yüksek çözünürlüklü FlagCDN entegreli ülke bayrakları.
+* **Anlık Bildirimler:** İstek listesi güncellemeleri ve profil yorumları için sağ üstte entegre bildirim zili.
 
-# Gerekli paketleri yükleyin
-$ npm install
+### 🎭 Gelişmiş Profil Kişiselleştirme
+* **Hareketli Arkaplan:** Profile özel MP4/WEBM video veya fotoğraf yükleme. Ayarlanabilir ses (Volume) ve şeffaflık (Opacity) seviyesi.
+* **Avatar Çerçeveleri:** Siber Neon, Saf Altın, Ejder Ateşi gibi dinamik avatar çerçeveleri.
+* **Etkileşim:** Ekran görüntüsü galerisi oluşturma ve canlı yorum bırakma sistemi.
 
-# Geliştirici modunda çalıştırın
-$ npm run electron:dev
-
-# Üretime hazır Kurulum (Setup.exe) dosyasını oluşturun
-$ npm run build
-Developer: Furkan (Nexarisa / Furky)
+---
+*Geliştirici: Furkan (Furky) | SR Ultimate Platform*
